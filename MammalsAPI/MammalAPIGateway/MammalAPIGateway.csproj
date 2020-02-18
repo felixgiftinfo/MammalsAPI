@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="Configurations\ocelot.config-animals.json" />
+    <Content Remove="Configurations\ocelot.config-humans.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove=".dockerignore" />
+    <None Remove="Dockerfile" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Configurations\ocelot.config-humans.json" />
+    <None Include="Configurations\ocelot.config-animals.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Ocelot" Version="14.0.9" />
+  </ItemGroup>
+
+</Project>
